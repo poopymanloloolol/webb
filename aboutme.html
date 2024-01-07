@@ -1,68 +1,88 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>
-Welcome to my about me
-    </title>
-</head>
-<style>
-button {
-    background-color:rgb(41, 40, 40);
-    font-size: 25px;
-    padding: 5px
-
-}
-</style>
-<body style="background-color:rgb(56, 74, 236, 0.774)">
-<table>
-<tr>
-<td>
-<button>
-    <a href="aboutme.html" title="this will lead you to home page">
-        Home
-    </a>
-</button>
-<button>
-    <a href="moreaboutme.html" title="this will lead you to moreaboutme">
-        More
-    </a>
-</button>
-</table>
-</button>
-</tr>
-</td>
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
-<div style="text-align: center;">
-    <h1>Kaung</h1>
-<p text="white">
-    Hello I am kaung and I am 13 year old, turning 14 in feb</p>
-<P>If you want to know more about me you can click the button More at the top left at your screen</P>
-</div>
-<table>
-<td width="2000px" height="3000px">
-<tr>
-<a href="https://discord.com/invite/EajwQcKN">
-    <img src="discord-new-20218785.jpg" width="9%">
-</a>
-</td>
-</tr>
-</a>
-</table> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="x-image" href="discord-new-20218785.jpg">
     <title>About me</title>
+    <style>
+        body {
+            background-color: rgb(56, 74, 236, 0.774);
+        }
+
+        a:link, a:visited {
+            margin-top:2%;
+            width:150px;
+            height:40px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a tabindex="1" class="btn btn-primary" href="aboutme.html" title="This will lead you to home page">Home</a>
+                &nbsp;&nbsp;&nbsp;
+                <a tabindex="2" class="btn btn-primary" href="moreaboutme.html" title="This will lead you to moreaboutme">More about me</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <!--Empty content for easy center alignment-->
+            </div>
+            <div class="col-md-4 text-center mt-5 text-white opacity-75">
+                <h2>Kaung</h2>
+            </div>
+            <div class="col-md-4">
+                <!--Empty content for easy center alignment-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <!--Empty content for easy center alignment-->
+            </div>
+            <div class="col-md-6 text-center text-white opacity-100">
+                <pre id="text" onmouseover="changeColor(true)" onmouseout="changeColor(false)">Hello I am <strong>Kaung</strong> and I am <strong>13</strong> years old, turning <strong>14</strong> in <strong>Feb</strong>.</pre>
+            </div>
+            <div class="col-md-3">
+                <!--Empty content for easy center alignment-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <!--Empty content for easy center alignment-->
+            </div>
+            <div class="col-md-4 text-center">
+                <img onclick="discordLink()" src="discord-new-20218785.jpg" alt="Discord Image" width="150px" height="100px">
+            </div>
+            <div class="col-md-4">
+                <!--Empty content for easy center alignment-->
+            </div>
+        </div>
+    </div>
+
+    <!--Script ( Defer (To execute after the document is loaded ) )-->
+    <script defer>
+        function changeColor(isHovered) {
+            var element = document.getElementById("text");
+            if (isHovered) {
+                element.classList.add("opacity-100");
+                element.classList.remove("opacity-50");
+            } else {
+                element.classList.add("opacity-50");
+                element.classList.remove("opacity-100");
+            }
+        }
+
+        function discordLink() {
+            window.open("https://discord.com/invite/EajwQcKN", "_blank");
+        }
+    </script>
 </body>
 </html>
